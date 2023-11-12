@@ -1,5 +1,6 @@
 // Target Elements
 const displayColorContainers = document.querySelectorAll('.color-display')
+const displayHexColorContainers = document.querySelectorAll('.hex-display')
 const colorInput = document.getElementById('color-input')
 const colorSchemeInput = document.getElementById('color-scheme')
 const getColorSchemeBtn = document.getElementById('get-color-scheme')
@@ -26,6 +27,7 @@ getColorSchemeBtn.addEventListener('click', function() {
         for(let i = 0; i < 5; i++) {
             console.log(data.colors[i].hex.value)
             displayColorContainers[i].style.backgroundColor = data.colors[i].hex.value
+            displayHexColorContainers[i].textContent = data.colors[i].hex.value
         }
     })
 })
