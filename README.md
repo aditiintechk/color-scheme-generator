@@ -8,10 +8,10 @@ The Color Scheme Generator is a web-based tool that leverages the power of the [
 
 ## Features
 
-- **Color Exploration:** Generate color schemes by selecting a color to see how they work together, powered by the Color API.
-- **Adjustable Parameters:** Fine-tune your color scheme by adjusting parameters such as hue, saturation, and brightness.
-- **Preview Mode:** Visualize how your color scheme might look in a sample UI layout to better assess its overall aesthetic.
-- **Export Options:** Copy your color schemes in various formats (HEX, RGB, HSL) for easy integration into your projects.
+- Generate color schemes by selecting a color to see how they work together, powered by the Color API.
+- Fine-tune your color scheme by adjusting parameters such as hue, saturation, and brightness.
+- Visualize how your color scheme might look in a sample UI layout to better assess its overall aesthetic.
+- Copy your color schemes in various formats (HEX, RGB, HSL) for easy integration into your projects.
 
 ## Usage
 
