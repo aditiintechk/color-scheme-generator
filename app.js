@@ -5,6 +5,8 @@ const colorInput = document.getElementById('color-input')
 const colorSchemeInput = document.getElementById('color-scheme')
 const getColorSchemeBtn = document.getElementById('get-color-scheme')
 
+const copyMessage = document.querySelector('.message')
+
 // Initialisations
 let currentScheme
 let currentColor
@@ -24,11 +26,26 @@ getColorSchemeBtn.addEventListener('click', function() {
     fetch(`https://www.thecolorapi.com/scheme?hex=${currentColor}&mode=${currentScheme}&count=5`)
     .then(response => response.json())
     .then(data => {
+        copyMessage.style.display = 'initial'
         for(let i = 0; i < 5; i++) {
-            console.log(data.colors[i].hex.value)
-            displayColorContainers[i].style.backgroundColor = data.colors[i].hex.value
-            displayHexColorContainers[i].textContent = data.colors[i].hex.value
+            let currentSubColor = data.colors[i].hex.value
+
+            displayColorContainers[i].style.backgroundColor = currentSubColor
+            displayHexColorContainers[i].textContent =currentSubColor
+
+            // Copy to clipboard feature
+
+            displayColorContainers[i].addEventListener('click', function() {
+                navigator.clipboard.writeText(currentSubColor).then(function() {
+                    copyMessage.textContent = `${currentSubColor} copied to clipboard`
+                });
+            })
+
+            displayHexColorContainers[i].addEventListener('click', function() {
+                navigator.clipboard.writeText(currentSubColor).then(function() {
+                    copyMessage.textContent = `${currentSubColor} copied to clipboard`
+                });
+            })
         }
     })
 })
-
