@@ -15,7 +15,7 @@ The Color Scheme Generator is a web-based tool that leverages the power of the [
 
 ## Usage
 
-1. Explore the [Color Scheme Generator](https://aditi002-holo.github.io/color-scheme-generator/) live!
+1. Explore the [Color Scheme Generator](https://aditiintechk.github.io/color-scheme-generator/) live!
 2. Dive deep into the color options and experiment with different settings, enhanced by the Color API.
 3. Once satisfied, copy the color among the schemes to use in your projects.
 
